@@ -3252,35 +3252,12 @@ body.contact-locked {
   font-size: 11px;
 }
 /* Section storytelling — reveal in rhythm; scene copy tied to pinned scroll */
-.revealLift {
-  opacity: 0;
-  transform: translate3d(0, 76px, 0) scale(0.975);
-  filter: blur(10px);
-  transition:
-    opacity 0.9s var(--motion-ease),
-    transform 1.1s var(--motion-ease),
-    filter 1.1s ease;
-  will-change: opacity, transform, filter;
+.revealLift, .staggerItem {
+  transform: translateY(8px);
+  transition: transform 0.4s var(--motion-ease);
 }
-.revealLift.isVisible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-  filter: blur(0);
-}
-.staggerItem {
-  opacity: 0;
-  transform: translateY(46px) scale(0.96);
-  filter: blur(5px);
-  transition:
-    opacity 0.68s ease,
-    transform 0.92s var(--motion-ease),
-    filter 0.75s ease;
-  will-change: opacity, transform;
-}
-.staggerItem.isVisible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
+.revealLift.isVisible, .staggerItem.isVisible {
+  transform: none;
 }
 .archiveRow {
   transition:
@@ -3509,3 +3486,67 @@ body.contact-locked {
 }
 
 img:not([src]), img[src=""], .external a:not([href]), .contactChoice:not([href]), #footerWhatsApp:not([href]) { display: none; }
+
+/* Give the introduction and the chapter marker separate rows in reading order. */
+.hero {
+  height: auto;
+}
+.heroPin {
+  position: relative;
+  height: auto;
+  grid-template-rows: minmax(min-content, 1fr) auto auto;
+  padding: clamp(84px, 13svh, 130px) 0 clamp(44px, 8svh, 90px);
+  row-gap: clamp(24px, 5svh, 56px);
+  min-height: 100svh;
+}
+.heroContent {
+  grid-row: 1;
+  max-height: none;
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+.heroPin .scrollcue {
+  position: static;
+  grid-row: 2;
+}
+.heroReveal {
+  position: relative;
+  inset: auto;
+  grid-row: 3;
+  width: 100%;
+  padding-block-start: clamp(20px, 5vh, 64px);
+  gap: 8px;
+  transform: none;
+  opacity: 1;
+}
+.heroReveal strong {
+  line-height: 1 !important;
+  font-size: clamp(64px, 10vw, 150px) !important;
+}
+.heroReveal span {
+  position: static;
+}
+.sceneCopy, .sceneCopy h2, .storyIntro h2 {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+.sceneArt {
+  opacity: 1;
+  filter: none;
+  transform: scale(calc(0.97 + var(--p, 0) * 0.03)) !important;
+}
+@media (max-width: 920px), (max-height: 720px) {
+  .sceneTrack { height: auto !important; }
+  .scenePin { position: relative; height: auto; min-height: 0; }
+  .sceneInner { height: auto; padding-block: 72px 44px; }
+}
+@media (max-width: 920px) {
+  .heroPin .heroContent { padding-block: 0 !important; max-height: none; gap: 20px !important; }
+}
+/* Keep scroll progress defined when the opening fits the viewport exactly. */
+.hero .heroPin { min-height: 118vh !important; }
+@media (prefers-reduced-motion: reduce) {
+  .sceneArt, .heroOrbit, .heroOrbit.two, .heroVisual .logoBlock { transform: none !important; }
+}
