@@ -1,6 +1,15 @@
 name: Publish portfolio and content studio
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'studio/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/publish-studio.yml'
   push:
     branches: [main]
     paths:
@@ -24,7 +33,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            studio/package-lock.json
+      - name: Install Astro dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify Astro site build using Sanity
+        run: npm run build -- --site https://3lshlsh.github.io --base /myportfolio
+        env:
+          SANITY_PROJECT_ID: f61knmhk
+          SANITY_DATASET: production
+      - name: Install Studio dependencies
+        run: npm ci --prefix studio --no-audit --no-fund
+      - name: Verify Studio build
+        run: npm --prefix studio run build
+        env:
+          SANITY_STUDIO_BASEPATH: /myportfolio/admin
+
   publish:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
