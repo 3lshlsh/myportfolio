@@ -3,6 +3,13 @@ import { structureTool } from "sanity/structure";
 import { schemaTypes, titles } from "./schema";
 const projectId = (process.env.SANITY_STUDIO_PROJECT_ID || "f61knmhk");
 const dataset = process.env.SANITY_STUDIO_DATASET || "production";
+// GitHub Pages redirects deep Studio routes through the admin entry point.
+if (typeof window !== "undefined") {
+  const route = new URLSearchParams(window.location.search).get("studioRoute");
+  if (route?.startsWith("/myportfolio/admin/")) {
+    window.history.replaceState(null, "", route);
+  }
+}
 export default defineConfig({
   name: "portfolio",
   title: "Ali Abuwardeh · إدارة الموقع",

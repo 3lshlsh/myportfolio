@@ -1,0 +1,46 @@
+name: Publish portfolio and content studio
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'studio/**'
+      - '.github/workflows/publish-studio.yml'
+      - 'index.html'
+      - '_astro/**'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: portfolio-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - run: npm ci --prefix studio --no-audit --no-fund
+      - run: npm --prefix studio run build
+        env:
+          SANITY_STUDIO_BASEPATH: /myportfolio/admin
+      - name: Assemble public website and Studio
+        run: |
+          mkdir -p public-site/admin
+          cp index.html public-site/
+          cp -r _astro public-site/
+          cp -r studio/dist/. public-site/admin/
+          cp studio/pages-404.html public-site/404.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public-site
+      - id: deployment
+        uses: actions/deploy-pages@v4
