@@ -1,0 +1,44 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<section class="modelSection" id="models">
+<div class="sectionHead">
+<div class="eyebrow" data-t="modelEyebrow" set:html={ui.modelEyebrow}>
+</div>
+<h2 data-t="modelTitle" set:html={ui.modelTitle}>
+</h2>
+<p data-t="modelIntro" set:html={ui.modelIntro}>
+</p>
+</div>
+<div class="modelLayout">
+<div class="modelViewer" id="modelViewer">
+<div class="modelFallback" id="modelFallback">
+<div class="fallbackIcon" data-t="threeDFallback" set:html={ui.threeDFallback}>
+</div>
+</div>
+<div class="viewerlabel">
+<span data-t="modelScroll" set:html={ui.modelScroll}>
+</span>
+<span id="modelType" data-t="demoType" set:html={ui.demoType}>
+</span>
+</div>
+</div>
+<div class="modelCopy">
+<div class="eyebrow" data-t="viewerEyebrow" set:html={ui.viewerEyebrow}>
+</div>
+<h3 data-t="modelCaption" set:html={ui.modelCaption}>
+</h3>
+<p data-t="modelBody" set:html={ui.modelBody}>
+</p>
+{portfolio.models.length > 0 && <select class="fileButton" id="modelSelection" aria-label={ui.modelTitle.replace(/<[^>]*>/g,"")}>{portfolio.models.map(model=><option value={model.id}>{model.name.ar}</option>)}</select>}
+<label class="fileButton">
+<span data-t="modelButton" set:html={ui.modelButton}>
+</span>
+<input type="file" id="modelFile" accept=".stl,.glb,.gltf">
+</label>
+<div class="modelStatus" id="modelStatus" data-t="modelStatus" set:html={ui.modelStatus}>
+</div>
+</div>
+</div>
+</section>

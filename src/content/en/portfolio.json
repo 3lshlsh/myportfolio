@@ -1,0 +1,320 @@
+{
+  "stages": {
+    "study": {
+      "title": "First, the craft.",
+      "body": "Graphic design studies at Arab Community College in Jordan, graduating with honors and ranking first nationally in the comprehensive exam, as documented in the portfolio.",
+      "label": "THE BEGINNING",
+      "chips": [
+        "Graphic Design",
+        "Education"
+      ]
+    },
+    "university": {
+      "title": "Design found<br><em>its audience.</em>",
+      "body": "At Imam Mohammad Ibn Saud Islamic University, work for the Deanship of E-Learning and Distance Education expanded from printed material into campaigns, events and motion.",
+      "label": "IMAM UNIVERSITY",
+      "chips": [
+        "University",
+        "E-Learning",
+        "Motion"
+      ]
+    },
+    "agency": {
+      "title": "New challenges.<br><em>Real clients.</em>",
+      "body": "Creative Graphics and OBAB were two past advertising ventures built through hands-on client work. The agencies later closed; the creative experience remained.",
+      "label": "CREATIVE VENTURES",
+      "chips": [
+        "Creative Graphics",
+        "OBAB",
+        "Branding"
+      ]
+    },
+    "gmcsa": {
+      "title": "Content that<br><em>helps people learn.</em>",
+      "body": "Training campaigns, course covers, educational materials, and motion for GMCSA. The archived work spans 2021–2023 and overlaps with other professional chapters.",
+      "label": "GMCSA · CONTINUING WORK",
+      "chips": [
+        "Training",
+        "Education",
+        "Motion"
+      ]
+    },
+    "othaim": {
+      "title": "From visuals<br><em>to real products.</em>",
+      "body": "Private-label product packaging at Abdullah Al-Othaim Markets brought design into everyday use: clear product identity, practical communication and retail presence.",
+      "label": "AL-OTHAIM MARKETS",
+      "chips": [
+        "Private Label",
+        "Packaging",
+        "Retail"
+      ]
+    },
+    "therapy": {
+      "title": "A visual language<br><em>built over time.</em>",
+      "body": "A long-running creative relationship spanning identity studies, clinic campaigns, social media, print, motion, and visual production.",
+      "label": "THERAPY SOLUTIONS · ONGOING",
+      "chips": [
+        "Visual Identity",
+        "Healthcare",
+        "Content"
+      ]
+    },
+    "3d": {
+      "title": "Some ideas are<br><em>made to be held.</em>",
+      "body": "3D modeling and printing became an ongoing creative exploration: Blender models, STL experiments, custom stands, objects and prototypes.",
+      "label": "A PARALLEL PASSION",
+      "chips": [
+        "Blender",
+        "STL",
+        "3D Printing"
+      ]
+    },
+    "cement": {
+      "title": "The story grows<br><em>through the lens.</em>",
+      "body": "Graphic Designer & Photographer within Corporate Communications at Riyadh Cement, combining visual design, photography, event coverage and motion.",
+      "label": "RIYADH CEMENT",
+      "chips": [
+        "Design",
+        "Photography",
+        "Film"
+      ]
+    }
+  },
+  "cases": {
+    "merka": {
+      "title": "MERKA",
+      "sub": "CULTURAL IDENTITY",
+      "year": "EARLY WORK",
+      "description": "A brand identity reinterpreting Saudi visual heritage in a contemporary language.",
+      "steps": [
+        "Researching local decorative references",
+        "Building the visual language",
+        "Applying the identity to products"
+      ]
+    },
+    "future": {
+      "title": "Future Pathways",
+      "sub": "BRAND SYSTEM",
+      "year": "ARCHIVE",
+      "description": "A complete identity system spanning logo design, stationery and applications.",
+      "steps": [
+        "Defining the identity direction",
+        "Designing the mark",
+        "Expanding the applications"
+      ]
+    },
+    "blue": {
+      "title": "Blue Arrow",
+      "sub": "BRAND GUIDELINES",
+      "year": "PAST VENTURES",
+      "description": "Identity, stationery and a detailed usage guide from the Creative Graphics archive.",
+      "steps": [
+        "Logo structure and identity",
+        "Colors and typography",
+        "Guidelines and stationery"
+      ]
+    },
+    "othaim": {
+      "title": "Al-Othaim · Private Label",
+      "sub": "PRODUCT & PACKAGING",
+      "year": "2021–2024",
+      "description": "Private-label packaging across Haley and ZOD products, from coffee and sauces to frozen foods.",
+      "steps": [
+        "Product category and requirements",
+        "Organizing on-pack information",
+        "Mockup and application review"
+      ]
+    },
+    "cement": {
+      "title": "Riyadh Cement",
+      "sub": "CORPORATE VISUALS",
+      "year": "2024–NOW",
+      "description": "Design, photography and motion for corporate communications. Only cleared public work will be published.",
+      "steps": [
+        "Understanding the audience",
+        "Creating visual assets",
+        "Photographing and documenting the story"
+      ]
+    },
+    "blur": {
+      "title": "BLUR Café",
+      "sub": "HOSPITALITY BRANDING",
+      "year": "PAST VENTURES",
+      "description": "An extensive archive covering identity applications, menu, packaging and campaigns.",
+      "steps": [
+        "Brand language",
+        "Packaging and menu",
+        "Marketing applications"
+      ]
+    },
+    "imam": {
+      "title": "Imam University · E-Learning",
+      "sub": "UNIVERSITY & COMMUNICATION",
+      "year": "2015–2018",
+      "description": "Print, campaigns, events and motion work for the Deanship of E-Learning and Distance Education.",
+      "steps": [
+        "University print materials",
+        "Campaigns and events",
+        "Infographics and motion"
+      ]
+    },
+    "gmcsa": {
+      "title": "GMCSA · Genius Center",
+      "sub": "TRAINING & LEARNING",
+      "year": "2021–2023 · ARCHIVE",
+      "description": "Years of course campaigns, learning materials, covers and educational motion.",
+      "steps": [
+        "Course campaign graphics",
+        "Training manuals and learning material",
+        "Motion for educational content"
+      ]
+    },
+    "therapy": {
+      "title": "Therapy Solutions Clinics",
+      "sub": "HEALTHCARE & CONTENT",
+      "year": "2022–2026 · ONGOING",
+      "description": "An evolving body of work across identity, print, social content, video and clinic visuals.",
+      "steps": [
+        "Identity development and application",
+        "Print and educational content",
+        "Campaigns, video and ongoing content"
+      ]
+    },
+    "gmcsaQuality": {
+      "title": "GMCSA · Total Quality Management",
+      "sub": "COURSE MATERIALS",
+      "year": "2022 · ARCHIVE",
+      "description": "Graphic materials for a total quality management training course, from covers to motion assets.",
+      "steps": [
+        "Course visual direction",
+        "Cover and template design",
+        "Video assets"
+      ]
+    },
+    "gmcsaMotion": {
+      "title": "GMCSA · Learning Videos",
+      "sub": "EDUCATIONAL MOTION",
+      "year": "2022 · ARCHIVE",
+      "description": "Motion assets for training topics, including accounting for non-accountants and financial intelligence.",
+      "steps": [
+        "Translating content into visuals",
+        "Building presentation elements",
+        "Preparing motion files"
+      ]
+    },
+    "clinicSocial": {
+      "title": "Therapy · Social Campaigns",
+      "sub": "SOCIAL MEDIA SYSTEM",
+      "year": "2023 · ARCHIVE",
+      "description": "An ongoing stream of clinic awareness and campaign visuals, with archived 2023 examples.",
+      "steps": [
+        "Defining the message",
+        "Building the art direction",
+        "Preparing a content series"
+      ]
+    },
+    "freelance": {
+      "title": "Independent Work · Creative Archive",
+      "sub": "FREELANCE & EXPERIMENTS",
+      "year": "VARIOUS YEARS",
+      "description": "Independent work spanning branding, advertising, print and motion for a wide range of clients.",
+      "steps": [
+        "Understanding each brief",
+        "Building a visual direction",
+        "Preparing final deliverables"
+      ]
+    },
+    "wathar": {
+      "title": "WATHAR Café",
+      "sub": "HOSPITALITY VISUAL IDENTITY",
+      "year": "2022–2025 · ARCHIVE",
+      "description": "A café identity across logo, cups, menus, digital screens, and marketing collateral.",
+      "steps": [
+        "Brand language",
+        "Cup and menu applications",
+        "Campaign content"
+      ]
+    },
+    "branivo": {
+      "title": "BRANIVO",
+      "sub": "IDENTITY SYSTEM",
+      "year": "2025",
+      "description": "A brand identity project including final identity assets and business stationery.",
+      "steps": [
+        "Identity direction",
+        "Final assets",
+        "Stationery"
+      ]
+    },
+    "klansa": {
+      "title": "KLANSA",
+      "sub": "COFFEE BRANDING",
+      "year": "2026 · IN PROGRESS",
+      "description": "A contemporary café brand, progressing from approved wordmark to a full visual identity.",
+      "steps": [
+        "Approved logo",
+        "Color palette",
+        "Upcoming identity applications"
+      ]
+    }
+  },
+  "packs": {
+    "haley-coffee": {
+      "name": "Haley Gold Instant Coffee",
+      "description": "Instant coffee packaging from the Haley private-label range.",
+      "brand": "HALEY / AL-OTHAIM"
+    },
+    "haley-mayo": {
+      "name": "Haley Classic Mayonnaise",
+      "description": "Retail packaging focused on clear product identification.",
+      "brand": "HALEY / AL-OTHAIM"
+    },
+    "peas": {
+      "name": "Green Peas",
+      "description": "Frozen vegetables packaging with clear hierarchy.",
+      "brand": "PRIVATE LABEL / AL-OTHAIM"
+    },
+    "zod": {
+      "name": "ZOD Fresh Food",
+      "description": "Packaging mockup for the ZOD fresh food range.",
+      "brand": "ZOD / AL-OTHAIM"
+    },
+    "haley-apricots": {
+      "name": "Haley Dried Apricot",
+      "description": "Dried fruit packaging from the Haley range.",
+      "brand": "HALEY / AL-OTHAIM"
+    }
+  },
+  "films": {
+    "logo": {
+      "name": "A Logo in Motion",
+      "description": "Exploring personal brand motion, from visual concept to rhythm and reveal.",
+      "tag": "BRAND MOTION",
+      "design": "LOGO"
+    },
+    "othaim": {
+      "name": "Al-Othaim Logo Reveal",
+      "description": "An identity reveal exploring the logo’s layers and visual rhythm.",
+      "tag": "IDENTITY ANIMATION",
+      "design": "PVT"
+    },
+    "rcc": {
+      "name": "Riyadh Cement Visual Production",
+      "description": "Photography and editing connected to industrial and corporate storytelling, subject to publication clearance.",
+      "tag": "VISUAL PRODUCTION",
+      "design": "RCC"
+    },
+    "gmcsaFilm": {
+      "name": "Training Motion Design",
+      "description": "Visual and motion assets for GMCSA training topics, including accounting and quality management.",
+      "tag": "TRAINING MOTION",
+      "design": "GMCSA"
+    },
+    "therapyFilm": {
+      "name": "Therapy Solutions Video Content",
+      "description": "Recurring awareness and campaign films for the clinics; selected final cuts will be added for publication.",
+      "tag": "CLINIC CONTENT",
+      "design": "TSCR"
+    }
+  }
+}

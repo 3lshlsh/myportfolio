@@ -1,0 +1,58 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<section class="archiveSpotlight" id="chapters">
+<div class="sectionHead">
+<span class="eyebrow" data-t="archiveEyebrow" set:html={ui.archiveEyebrow}>
+</span>
+<h2 data-t="archiveTitle" set:html={ui.archiveTitle}>
+</h2>
+<p data-t="archiveSub" set:html={ui.archiveSub}>
+</p>
+</div>
+<div class="archiveRows">
+<button class="archiveRow" data-open-case="gmcsa">
+<div class="archivePhoto">
+<img id="gmcsaArchiveImg" alt={ui.trainingWork} data-i18n-alt="trainingWork" loading="lazy">
+</div>
+<div class="archiveWords">
+<span class="eyebrow" data-t="gmcsaEyebrow" set:html={ui.gmcsaEyebrow}>
+</span>
+<h3 data-t="gmcsaTitle" set:html={ui.gmcsaTitle}>
+</h3>
+<p data-t="gmcsaArchive" set:html={ui.gmcsaArchive}>
+</p>
+<span class="archiveArrow">↗</span>
+</div>
+</button>
+<button class="archiveRow" data-open-case="therapy">
+<div class="archivePhoto">
+<img id="clinicArchiveImg" alt={ui.clinicWork} data-i18n-alt="clinicWork" loading="lazy">
+</div>
+<div class="archiveWords">
+<span class="eyebrow" data-t="therapyEyebrow" set:html={ui.therapyEyebrow}>
+</span>
+<h3 data-t="therapyTitle" set:html={ui.therapyTitle}>
+</h3>
+<p data-t="clinicArchive" set:html={ui.clinicArchive}>
+</p>
+<span class="archiveArrow">↗</span>
+</div>
+</button>
+<button class="archiveRow" data-open-case="freelance">
+<div class="archivePhoto lettering">
+<span>MORE<br>THAN<br>ONE<br>PATH.</span>
+</div>
+<div class="archiveWords">
+<span class="eyebrow" data-t="otherEyebrow" set:html={ui.otherEyebrow}>
+</span>
+<h3 data-t="otherArchiveTitle" set:html={ui.otherArchiveTitle}>
+</h3>
+<p data-t="otherArchive" set:html={ui.otherArchive}>
+</p>
+<span class="archiveArrow">↗</span>
+</div>
+</button>
+</div>
+</section>

@@ -1,0 +1,17 @@
+{
+  "name": "ali-portfolio-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "seed": "node scripts/seed.mjs"
+  },
+  "dependencies": {
+    "sanity": "4.22.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "styled-components": "6.6.0"
+  }
+}

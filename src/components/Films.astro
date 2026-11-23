@@ -1,0 +1,16 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<section class="sectionWrap" id="films">
+<div class="sectionHead">
+<div class="eyebrow" data-t="filmsEyebrow" set:html={ui.filmsEyebrow}>
+</div>
+<h2 data-t="filmsTitle" set:html={ui.filmsTitle}>
+</h2>
+<p data-t="filmsSub" set:html={ui.filmsSub}>
+</p>
+</div>
+<div class="videoGrid" id="videoGrid">
+</div>
+</section>

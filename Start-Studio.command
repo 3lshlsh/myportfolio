@@ -6,10 +6,9 @@ if ! command -v npm >/dev/null || ! command -v node >/dev/null || ! node -e 'con
   read -r -p 'اضغط Enter للخروج.'
   exit 1
 fi
-export SANITY_STUDIO_PROJECT_ID=zkj5s6wr
+export SANITY_STUDIO_PROJECT_ID=f61knmhk
 export SANITY_STUDIO_DATASET=production
 npm ci --no-audit --no-fund
 ./node_modules/.bin/sanity login
-./node_modules/.bin/sanity dataset import portfolio.ndjson production --missing
 echo "افتح رابط localhost الذي سيظهر أدناه لتدخل لوحة التحكم."
 exec ./node_modules/.bin/sanity dev

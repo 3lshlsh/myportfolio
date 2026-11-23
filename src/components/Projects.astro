@@ -1,0 +1,32 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<section class="sectionWrap" id="works">
+<div class="sectionHead">
+<div class="eyebrow" data-t="worksEyebrow" set:html={ui.worksEyebrow}>
+</div>
+<h2 data-t="worksTitle" set:html={ui.worksTitle}>
+</h2>
+<p data-t="worksSub" set:html={ui.worksSub}>
+</p>
+</div>
+<div class="galleryNav">
+<button class="active" data-filter="all" data-t="all" set:html={ui.all}>
+</button>
+<button data-filter="brand" data-t="branding" set:html={ui.branding}>
+</button>
+<button data-filter="pack" data-t="packaging" set:html={ui.packaging}>
+</button>
+<button data-filter="corporate" data-t="corporate" set:html={ui.corporate}>
+</button>
+<button data-filter="training" data-t="training" set:html={ui.training}>
+</button>
+<button data-filter="health" data-t="health" set:html={ui.health}>
+</button>
+<button data-filter="freelance" data-t="freelance" set:html={ui.freelance}>
+</button>
+</div>
+<div class="caseGrid" id="caseGrid">
+</div>
+</section>

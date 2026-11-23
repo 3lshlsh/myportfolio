@@ -1,0 +1,42 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<section class="packSection" id="packaging">
+<div class="sectionHead">
+<div class="eyebrow" data-t="packEyebrow" set:html={ui.packEyebrow}>
+</div>
+<h2 data-t="packTitle" set:html={ui.packTitle}>
+</h2>
+<p data-t="packSub" set:html={ui.packSub}>
+</p>
+</div>
+<div class="packStage">
+<div class="packShow" id="packShow">
+<div class="packRing">
+</div>
+<div class="packSheet" id="packSheet">
+<img id="packImage" alt="Product packaging">
+</div>
+</div>
+<div class="packDetails">
+<span class="eyebrow" id="packBrand">
+</span>
+<div class="counter" id="packCount">
+</div>
+<h3 id="packName">
+</h3>
+<p id="packDescription">
+</p>
+<div class="packSwitch">
+<button id="packPrev" aria-label={ui.prev} data-i18n-aria-label="prev">→</button>
+<button id="packNext" aria-label={ui.next} data-i18n-aria-label="next">←</button>
+</div>
+<span class="softcap" data-t="packHint" set:html={ui.packHint}>
+</span>
+</div>
+</div>
+<div id="productPhotos" hidden></div>
+<div class="packStrip" id="packStrip">
+</div>
+</section>

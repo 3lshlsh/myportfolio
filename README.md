@@ -40,7 +40,7 @@ Open `http://localhost:8080` in a browser. All files stay in this project. Inter
 
 ## Critical: confirm the public phone number
 
-`PORTFOLIO_CONFIG.contactE164` at the beginning of the first `<script>` in `index.html` is currently `+966508279970` (**0508279970**), sourced from an archived personal CV. **The owner must verify this is still the desired public phone/WhatsApp number before publishing**. Both button targets and the footer WhatsApp link are generated from this config at runtime. Do not hard-code other numbers.
+Contact and portfolio links can be configured in Sanity Studio.
 
 ## Asset and content reality
 

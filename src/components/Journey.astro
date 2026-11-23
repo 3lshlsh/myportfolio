@@ -1,0 +1,31 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<aside class="prehistory" aria-label={ui.earlyBackground} data-i18n-aria-label="earlyBackground">
+<details class="prehistoryDetails">
+<summary class="prehistorySummary">
+<span class="prehistoryIcon" aria-hidden="true">＋</span>
+<span data-t="preludeLabel" set:html={ui.preludeLabel}>
+</span>
+<span class="prehistoryToggle" aria-hidden="true">⌄</span>
+</summary>
+<div class="prehistoryBody">
+<span class="prehistoryDate" dir="ltr">2008–2014</span>
+<p data-t="preludeText" set:html={ui.preludeText}>
+</p>
+</div>
+</details>
+</aside>
+<section class="storyIntro" id="journey">
+<div class="eyebrow" data-t="journeyEyebrow" set:html={ui.journeyEyebrow}>
+</div>
+<h2 data-t="introTitle" set:html={ui.introTitle}>
+</h2>
+<p data-t="introBody" set:html={ui.introBody}>
+</p>
+<div class="trail">
+</div>
+</section>
+<div id="storyMount">
+</div>

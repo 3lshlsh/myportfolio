@@ -1,0 +1,37 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<div class="grain">
+</div>
+<div class="progress" id="progress">
+</div>
+<header class="top">
+<a class="wordmark" href="#start">
+<span class="brandIcon">
+<img class="brandActualLogo" id="miniLogo" alt="" onerror="this.style.display='none'" src=""/>
+<span class="brandFallback" aria-hidden="true">A<span>·</span>
+</span>
+</span>
+<span class="wordmarkText">ALI ABUWARDEH<i>.</i>
+</span>
+</a>
+<nav class="nav">
+<a href="#journey" data-t="navJourney" set:html={ui.navJourney}>
+</a>
+<a href="#works" data-t="navWorks" set:html={ui.navWorks}>
+</a>
+<a href="#packaging" data-t="navPack" set:html={ui.navPack}>
+</a>
+<a href="#films" data-t="navFilms" set:html={ui.navFilms}>
+</a>
+<a href="#models" data-t="nav3d" set:html={ui.nav3d}>
+</a>
+<button class="cta contactOpen" type="button" data-t="navContact" aria-haspopup="dialog" aria-controls="contactModal" set:html={ui.navContact}>
+</button>
+<div class="language">
+<button class="active" data-lang="ar">عربي</button>
+<button data-lang="en">EN</button>
+</div>
+</nav>
+</header>

@@ -1,0 +1,173 @@
+{
+  "stages": [
+    {
+      "id": "study",
+      "type": "study",
+      "yr": "2014",
+      "scene": "#1e2a31"
+    },
+    {
+      "id": "university",
+      "type": "university",
+      "yr": "2015–2018",
+      "scene": "#1c3037"
+    },
+    {
+      "id": "agency",
+      "type": "agency",
+      "yr": "2018–2021",
+      "scene": "#24343a"
+    },
+    {
+      "id": "gmcsa",
+      "type": "gmcsa",
+      "yr": "2021–2023",
+      "scene": "#253039"
+    },
+    {
+      "id": "othaim",
+      "type": "othaim",
+      "yr": "2021–2024",
+      "scene": "#304045"
+    },
+    {
+      "id": "therapy",
+      "type": "therapy",
+      "yr": "2022–2026",
+      "scene": "#263039"
+    },
+    {
+      "id": "3d",
+      "type": "3d",
+      "yr": "2023–2026",
+      "scene": "#283438"
+    },
+    {
+      "id": "cement",
+      "type": "cement",
+      "yr": "2024–2026",
+      "scene": "#182a31"
+    }
+  ],
+  "cases": [
+    {
+      "id": "merka",
+      "cat": "brand",
+      "images": []
+    },
+    {
+      "id": "future",
+      "cat": "brand",
+      "images": []
+    },
+    {
+      "id": "blue",
+      "cat": "brand",
+      "images": []
+    },
+    {
+      "id": "othaim",
+      "cat": "pack",
+      "images": []
+    },
+    {
+      "id": "cement",
+      "cat": "corporate",
+      "images": []
+    },
+    {
+      "id": "blur",
+      "cat": "brand",
+      "images": []
+    },
+    {
+      "id": "imam",
+      "cat": "corporate",
+      "images": []
+    },
+    {
+      "id": "gmcsa",
+      "cat": "training",
+      "images": []
+    },
+    {
+      "id": "therapy",
+      "cat": "health",
+      "images": []
+    },
+    {
+      "id": "gmcsaQuality",
+      "cat": "training",
+      "images": []
+    },
+    {
+      "id": "gmcsaMotion",
+      "cat": "training",
+      "images": []
+    },
+    {
+      "id": "clinicSocial",
+      "cat": "health",
+      "images": []
+    },
+    {
+      "id": "freelance",
+      "cat": "freelance",
+      "images": []
+    },
+    {
+      "id": "wathar",
+      "cat": "brand",
+      "images": []
+    },
+    {
+      "id": "branivo",
+      "cat": "brand",
+      "images": []
+    },
+    {
+      "id": "klansa",
+      "cat": "brand",
+      "images": []
+    }
+  ],
+  "packs": [
+    {
+      "id": "haley-coffee",
+      "image": "haley-coffee"
+    },
+    {
+      "id": "haley-mayo",
+      "image": "haley-mayo"
+    },
+    {
+      "id": "peas",
+      "image": "peas"
+    },
+    {
+      "id": "zod",
+      "image": "zod"
+    },
+    {
+      "id": "haley-apricots",
+      "image": "haley-apricots"
+    }
+  ],
+  "films": [
+    {
+      "id": "logo"
+    },
+    {
+      "id": "othaim"
+    },
+    {
+      "id": "rcc"
+    },
+    {
+      "id": "gmcsaFilm"
+    },
+    {
+      "id": "therapyFilm"
+    }
+  ]
+}

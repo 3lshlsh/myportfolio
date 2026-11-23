@@ -1,0 +1,23 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { settings, arUI: ui } = portfolio;
+---
+<section class="end" id="contact">
+<span class="eyebrow" data-t="endEyebrow" set:html={ui.endEyebrow}>
+</span>
+<h2 data-t="endTitle" set:html={ui.endTitle}>
+</h2>
+<p data-t="endBody" set:html={ui.endBody}>
+</p>
+<a class="pill" id="footerWhatsApp" href={settings.contactE164 && `https://wa.me/${settings.contactE164.slice(1)}` || undefined} target="_blank" rel="noopener noreferrer" data-t="whatsAppCta" set:html={ui.whatsAppCta}>
+</a>
+<footer class="endFoot">
+<span>© ALI ABUWARDEH · 2026</span>
+<div class="external">
+<a href={settings.behance || undefined} target="_blank" rel="noopener noreferrer">Behance ↗</a>
+<a href={settings.shutterstock || undefined} target="_blank" rel="noopener noreferrer">Shutterstock ↗</a>
+</div>
+<span data-t="builtFor" set:html={ui.builtFor}>
+</span>
+</footer>
+</section>

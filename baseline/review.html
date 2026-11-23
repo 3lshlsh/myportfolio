@@ -1,0 +1,22 @@
+<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><title>مرجع V11</title>
+<style>body{font:16px system-ui;background:#fafafa;color:#16241b}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:16px}article{min-width:0}aside{overflow:hidden;background:#111e19}iframe{border:0;display:block;transform-origin:top left}button{padding:8px;margin:4px}output{display:block}</style>
+<h1>مرجع الرحلة V11</h1><p>أربع معاينات للملف الأصلي. اختر مشهداً لمقارنته في اللغتين والمقاسين، أو تفاعل مع كل معاينة مباشرة.</p>
+<nav></nav><main></main><script>
+const views=[];
+for(const [label,id] of [['الافتتاح','start'],['كشف 2014','year'],['المرحلة الأولى','chapter'],['الأرشيف','chapters'],['المشاريع','works'],['التغليف','packaging'],['الفيديو','films'],['المجسمات','models'],['التواصل','contact']]){
+ const b=document.createElement('button');b.textContent=label;b.onclick=()=>views.forEach(({frame})=>{
+ const win=frame.contentWindow,doc=frame.contentDocument;
+ const el=id==='year'?doc.querySelector('.hero'):id==='chapter'?doc.querySelector('.sceneTrack'):doc.getElementById(id);
+ if(el)win.scrollTo({top:el.getBoundingClientRect().top+win.scrollY+(id==='year'||id==='chapter'?(el.offsetHeight-win.innerHeight)*.8:-60),behavior:'instant'});
+ });document.querySelector('nav').append(b);
+}
+for(const [device,w,h] of [['كمبيوتر',1440,900],['جوال',390,844]])for(const lang of ['ar','en']){
+ const box=document.createElement('article');box.innerHTML='<h2></h2><aside dir="ltr"></aside><output></output>';document.querySelector('main').append(box);
+ box.querySelector('h2').textContent=device+' · '+lang+' · '+w+' × '+h;
+ const wrap=box.querySelector('aside'),frame=document.createElement('iframe');frame.width=w;frame.height=h;frame.title=box.querySelector('h2').textContent;
+ frame.onload=()=>{const doc=frame.contentDocument;doc.querySelector('[data-lang="'+lang+'"]').click();
+ box.querySelector('output').textContent=[doc.documentElement.dir,doc.querySelector('h1').innerText.replace(/\n/g,' '),'مراحل '+doc.querySelectorAll('.sceneTrack').length,'مشاريع '+doc.querySelectorAll('.case').length,'عرض المحتوى '+doc.documentElement.scrollWidth].join(' · ');};
+ frame.src='../index(7).html';wrap.append(frame);views.push({frame});
+ new ResizeObserver(()=>{const scale=Math.min(1,wrap.clientWidth/w);frame.style.transform='scale('+scale+')';wrap.style.height=h*scale+'px'}).observe(box);
+}
+</script></html>

@@ -1,0 +1,51 @@
+---
+import portfolio from "../generated/portfolio.json";
+const { arUI: ui } = portfolio;
+---
+<section class="hero" id="start">
+<div class="heroPin">
+<div class="heroOrbit">
+</div>
+<div class="heroOrbit two">
+</div>
+<div class="heroContent">
+<div>
+<span class="eyebrow" data-t="heroEyebrow" set:html={ui.heroEyebrow}>
+</span>
+<h1 data-t="hero1" set:html={ui.hero1}>
+</h1>
+<p data-t="heroSub" set:html={ui.heroSub}>
+</p>
+<a href="#journey" class="pill" data-t="explore" set:html={ui.explore}>
+</a>
+</div>
+<div class="heroVisual">
+<div class="brandHalo" aria-hidden="true">
+</div>
+<div class="logoBlock">
+<img id="heroLogo" alt={ui.personalLogo} data-i18n-alt="personalLogo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" onload="this.nextElementSibling.style.display='none'"/>
+<div class="logoEmblem" id="logoFallback" aria-label={ui.logoMark} data-i18n-aria-label="logoMark">
+<span class="emblemStroke">
+</span>
+<span class="emblemDot">
+</span>
+<span class="emblemCaption" data-t="logoPending" set:html={ui.logoPending}>
+</span>
+</div>
+</div>
+<label class="uploadLogo" for="logoFile" title={ui.selectLogo} data-i18n-title="selectLogo">
+<span aria-hidden="true">↥</span> <span data-t="logoUpload" set:html={ui.logoUpload}>
+</span>
+<input type="file" id="logoFile" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden>
+</label>
+</div>
+</div>
+<div class="heroReveal">
+<strong dir="ltr">2014</strong>
+<span data-t="firstChapter" set:html={ui.firstChapter}>
+</span>
+</div>
+<div class="scrollcue" data-t="scroll" set:html={ui.scroll}>
+</div>
+</div>
+</section>
