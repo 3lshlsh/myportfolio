@@ -1,4 +1,5 @@
 import { defineConfig } from "sanity";
+import { InitialContent } from "./InitialContent";
 import { structureTool } from "sanity/structure";
 import { schemaTypes, titles } from "./schema";
 const projectId = (process.env.SANITY_STUDIO_PROJECT_ID || "f61knmhk");
@@ -20,8 +21,8 @@ export default defineConfig({
       structure: (S) =>
         S.list()
           .title("إدارة المحتوى")
-          .items(
-            Object.entries(titles).map(([id, title]) =>
+          .items([
+            ...Object.entries(titles).map(([id, title]) =>
               id === "settings"
                 ? S.listItem()
                     .title(title)
@@ -32,7 +33,11 @@ export default defineConfig({
                     )
                 : S.documentTypeListItem(id).title(title),
             ),
-          ),
+            S.divider(),
+            S.listItem().title("إعداد المحتوى لأول مرة").child(
+              S.component(InitialContent).title("إعداد المحتوى لأول مرة"),
+            ),
+          ]),
     }),
   ],
   schema: {
