@@ -1,0 +1,16 @@
+{
+  "name": "ali-creative-journey",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "prebuild": "node scripts/prepare-content.mjs",
+    "predev": "node scripts/prepare-content.mjs"
+  },
+  "dependencies": {
+    "astro": "5.18.2",
+    "three": "0.160.1"
+  }
+}
