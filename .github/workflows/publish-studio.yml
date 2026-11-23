@@ -1,22 +1,66 @@
 name: Publish portfolio and content studio
+
 on:
-  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'studio/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/publish-studio.yml'
   push:
     branches: [main]
     paths:
+      - 'src/**'
+      - 'scripts/**'
       - 'studio/**'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/publish-studio.yml'
-      - 'index.html'
-      - '_astro/**'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [sanity-publish]
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: portfolio-pages
   cancel-in-progress: false
+
 jobs:
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            studio/package-lock.json
+      - name: Install Astro dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify Astro site build using Sanity
+        run: npm run build -- --site https://3lshlsh.github.io --base /myportfolio
+        env:
+          SANITY_PROJECT_ID: f61knmhk
+          SANITY_DATASET: production
+      - name: Install Studio dependencies
+        run: npm ci --prefix studio --no-audit --no-fund
+      - name: Verify Studio build
+        run: npm --prefix studio run build
+        env:
+          SANITY_STUDIO_BASEPATH: /myportfolio/admin
+
   publish:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -27,20 +71,30 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: studio/package-lock.json
-      - run: npm ci --prefix studio --no-audit --no-fund
-      - run: npm --prefix studio run build
+          cache-dependency-path: |
+            package-lock.json
+            studio/package-lock.json
+      - uses: actions/configure-pages@v5
+      - name: Install Astro site dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build site from published Sanity content
+        run: npm run build -- --site https://3lshlsh.github.io --base /myportfolio
+        env:
+          SANITY_PROJECT_ID: f61knmhk
+          SANITY_DATASET: production
+      - name: Install Studio dependencies
+        run: npm ci --prefix studio --no-audit --no-fund
+      - name: Build Sanity Studio
+        run: npm --prefix studio run build
         env:
           SANITY_STUDIO_BASEPATH: /myportfolio/admin
-      - name: Assemble public website and Studio
+      - name: Assemble site and Studio
         run: |
-          mkdir -p public-site/admin
-          cp index.html public-site/
-          cp -r _astro public-site/
-          cp -r studio/dist/. public-site/admin/
-          cp studio/pages-404.html public-site/404.html
+          mkdir -p dist/admin
+          cp -r studio/dist/. dist/admin/
+          cp studio/pages-404.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public-site
+          path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
